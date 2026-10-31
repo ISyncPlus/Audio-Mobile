@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "AudioBlocks",
+    "slug": "audioblocks-mobile",
+    "scheme": "audioblocks",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.audioblocks.mobile",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.audioblocks.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#090909"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-web-browser",
+      [
+        "expo-audio",
+        {
+          "enableBackgroundPlayback": true,
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      "@react-native-community/datetimepicker"
+    ],
+    "web": {
+      "bundler": "metro"
+    },
+    "icon": "./assets/icon.png"
+  }
+}
